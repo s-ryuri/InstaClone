@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".loginActivity">
+<!--    // 처음 갔을 때 로그인 버튼 클릭 했을 때 로그인 버튼으로 넘어가는 java 파일-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/language"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:id="@+id/btn_language"
+        />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/instagram" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_make_id"
+        android:text="@string/make_id"
+        android:textStyle="bold"
+        android:backgroundTint="#458EFF"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_login"
+        android:id="@+id/btn_login"
+        android:textColor="#458EFF"
+        android:textStyle="bold"
+        android:background="#00ff0000"
+        />
+
+</LinearLayout>
