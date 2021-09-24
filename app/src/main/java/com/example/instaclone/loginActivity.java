@@ -24,5 +24,15 @@ public class loginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_make_id = (Button) findViewById(R.id.btn_make_id);
+        btn_make_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(loginActivity.this,signin_display.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); //애니메이션 삭제
+                startActivity(intent);
+            }
+        });
     }
 }

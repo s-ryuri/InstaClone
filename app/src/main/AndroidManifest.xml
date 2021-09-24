@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Instaclone">
         <activity
-            android:name=".MainActivity"
+            android:name=".signin_display"
+            android:exported="true" />
+        <activity
+            android:name=".Maindisplay"
+            android:exported="true" />
+        <activity
+            android:name=".logindisplay"
+            android:exported="true" />
+        <activity
+            android:name=".loginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
