@@ -20,11 +20,11 @@
     <TabHost
         android:id="@+id/tabHost1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
@@ -41,56 +41,83 @@
 
                 <!-- 첫 번째 페이지. content1 -->
                 <LinearLayout
-                    android:id="@+id/content1"
+                    android:id="@+id/전화번호"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edit_round"
+                        android:id="@+id/telephone_edittext1"
+                        android:hint="휴대폰"
+                        />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#8BC34A"
+                        android:text="instagram의 업데이트 내용을 SMS로 수신할 수 있으며,\n
+언제든지 수신을 취소할 수 있습니다."
+
                         android:gravity="center"
-                        android:padding="8dp"
-                        android:text="TAB CONTENT 1" />
+                        android:layout_marginTop="20dp"
+                        android:textSize="12dp"
+                        />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="다음"
+                        android:id="@+id/telephone_next"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="#458EFF"/>
 
                 </LinearLayout>
 
                 <!-- 두 번째 페이지. content2 -->
                 <LinearLayout
-                    android:id="@+id/content2"
+                    android:id="@+id/이메일"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#009688"
-                        android:gravity="center"
-                        android:padding="8dp"
-                        android:text="TAB CONTENT 2" />
-
-                </LinearLayout>
-
-                <!-- 세 번째 페이지. content3 -->
-                <LinearLayout
-                    android:id="@+id/content3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edit_round"
+                        android:id="@+id/email_edittext"
+                        android:hint="이메일"/>
+                    <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#2196F3"
-                        android:gravity="center"
-                        android:padding="8dp"
-                        android:text="TAB CONTENT 3" />
-
+                        android:text="다음"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="#458EFF"
+                        android:id="@+id/email_next"/>
                 </LinearLayout>
+
             </FrameLayout>
         </LinearLayout>
     </TabHost>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="이미 계정이 있으신가요?" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="로그인하기?" />
+    </LinearLayout>
 
 </LinearLayout>

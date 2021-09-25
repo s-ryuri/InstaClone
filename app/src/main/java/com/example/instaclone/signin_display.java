@@ -2,15 +2,20 @@ package com.example.instaclone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TabHost;
 
 // 가입화면
 public class signin_display extends AppCompatActivity {
 
-    private Button telephone,email;
+    private Button telephone,email,email_next,telephone_next;
     private TabHost tabHost1;
+    private EditText email_edittext,telephone_edittext1;
+    private String str,tele_str;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,21 +25,45 @@ public class signin_display extends AppCompatActivity {
 
         // 첫 번째 Tab. (탭 표시 텍스트:"TAB 1"), (페이지 뷰:"content1")
         TabHost.TabSpec ts1 = tabHost1.newTabSpec("Tab Spec 1") ;
-        ts1.setContent(R.id.content1) ;
+        ts1.setContent(R.id.전화번호) ;
         ts1.setIndicator("TAB 1") ;
         tabHost1.addTab(ts1)  ;
 
         // 두 번째 Tab. (탭 표시 텍스트:"TAB 2"), (페이지 뷰:"content2")
         TabHost.TabSpec ts2 = tabHost1.newTabSpec("Tab Spec 2") ;
-        ts2.setContent(R.id.content2) ;
+        ts2.setContent(R.id.이메일) ;
         ts2.setIndicator("TAB 2") ;
         tabHost1.addTab(ts2) ;
 
-        // 세 번째 Tab. (탭 표시 텍스트:"TAB 3"), (페이지 뷰:"content3")
-        TabHost.TabSpec ts3 = tabHost1.newTabSpec("Tab Spec 3") ;
-        ts3.setContent(R.id.content3) ;
-        ts3.setIndicator("TAB 3") ;
-        tabHost1.addTab(ts3) ;
+        email_next = (Button) findViewById(R.id.email_next);
+        email_edittext = (EditText) findViewById(R.id.email_edittext);
+
+        email_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 여기를 누르면 인증 코드 입력 화면으로 가고
+                // 여기서 edittext 한 값을 다음 화면으로 넘겨줘야됨
+                str = email_edittext.getText().toString();
+                Intent intent = new Intent(signin_display.this,email_verify.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                intent.putExtra("str",str);
+                startActivity(intent);
+            }
+        });
+
+        telephone_next = (Button) findViewById(R.id.telephone_next);
+        telephone_edittext1 = (EditText) findViewById(R.id.telephone_edittext1);
+
+        telephone_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tele_str = telephone_edittext1.getText().toString();
+                Intent intent = new Intent(signin_display.this,telephone_verify.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                intent.putExtra("tele_str",tele_str);
+                startActivity(intent);
+            }
+        });
 
     }
 }
