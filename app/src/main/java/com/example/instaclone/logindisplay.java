@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class logindisplay extends AppCompatActivity {
-    private Button btn_login,facebooklogin,signin;
+    private Button btn_login,facebooklogin,signin,btn_language;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,5 +45,14 @@ public class logindisplay extends AppCompatActivity {
             }
         });
 
+        btn_language = (Button) findViewById(R.id.btn_language);
+        btn_language.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(logindisplay.this,scroll_language.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
     }
 }
