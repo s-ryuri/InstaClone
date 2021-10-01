@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 // 가입화면
 public class signin_display extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class signin_display extends AppCompatActivity {
     private TabHost tabHost1;
     private EditText email_edittext,telephone_edittext1;
     private String str,tele_str;
+    private TextView gotologin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,18 +28,18 @@ public class signin_display extends AppCompatActivity {
         // 첫 번째 Tab. (탭 표시 텍스트:"TAB 1"), (페이지 뷰:"content1")
         TabHost.TabSpec ts1 = tabHost1.newTabSpec("Tab Spec 1") ;
         ts1.setContent(R.id.전화번호) ;
-        ts1.setIndicator("TAB 1") ;
+        ts1.setIndicator("전화번호") ;
         tabHost1.addTab(ts1)  ;
 
         // 두 번째 Tab. (탭 표시 텍스트:"TAB 2"), (페이지 뷰:"content2")
         TabHost.TabSpec ts2 = tabHost1.newTabSpec("Tab Spec 2") ;
         ts2.setContent(R.id.이메일) ;
-        ts2.setIndicator("TAB 2") ;
+        ts2.setIndicator("이메일") ;
         tabHost1.addTab(ts2) ;
 
         email_next = (Button) findViewById(R.id.email_next);
         email_edittext = (EditText) findViewById(R.id.email_edittext);
-
+        gotologin = (TextView) findViewById(R.id.gotologin);
         email_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +63,15 @@ public class signin_display extends AppCompatActivity {
                 Intent intent = new Intent(signin_display.this,telephone_verify.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 intent.putExtra("tele_str",tele_str);
+                startActivity(intent);
+            }
+        });
+
+        gotologin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(signin_display.this,logindisplay.class);
+                intent.addFlags(intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
             }
         });
