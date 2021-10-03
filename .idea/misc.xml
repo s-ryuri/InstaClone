@@ -14,8 +14,12 @@
         <entry key="..\:/Users/Ryool/AndroidStudioProjects/instaclone/app/src/main/res/layout/activity_logindisplay.xml" value="0.25" />
         <entry key="..\:/Users/Ryool/AndroidStudioProjects/instaclone/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Ryool/AndroidStudioProjects/instaclone/app/src/main/res/layout/activity_maindisplay.xml" value="0.263671875" />
+        <entry key="..\:/Users/Ryool/AndroidStudioProjects/instaclone/app/src/main/res/layout/email_verify.xml" value="0.262890625" />
+        <entry key="..\:/Users/Ryool/AndroidStudioProjects/instaclone/app/src/main/res/layout/id_password_page.xml" value="0.25" />
         <entry key="..\:/Users/Ryool/AndroidStudioProjects/instaclone/app/src/main/res/layout/login.xml" value="0.274609375" />
+        <entry key="..\:/Users/Ryool/AndroidStudioProjects/instaclone/app/src/main/res/layout/scroll_language.xml" value="0.274609375" />
         <entry key="..\:/Users/Ryool/AndroidStudioProjects/instaclone/app/src/main/res/layout/signin_display.xml" value="0.274609375" />
+        <entry key="..\:/Users/Ryool/AndroidStudioProjects/instaclone/app/src/main/res/layout/telephone_verify.xml" value="0.33" />
       </map>
     </option>
   </component>

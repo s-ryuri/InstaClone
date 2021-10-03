@@ -7,4 +7,7 @@
     <string name="login_password">비밀번호</string>
     <string name="login_info">로그인 상세 정보를 잊으셨나요?</string>
     <string name="signin">계정이 없으신가요?</string>
+    <string name="law">연락처기 주기적으로 동기화되고 instagram 서버에 저장되어
+친구를 빠르게 찾고 Instagram 서비스를 개선하는데 사용됩니다. 연락처를 삭제하려면 설정으로 이동하여
+연결을 해제하세요.</string>
 </resources>

@@ -10,6 +10,8 @@ import android.widget.Button;
 
 public class logindisplay extends AppCompatActivity {
     private Button btn_login,facebooklogin,signin,btn_language;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
