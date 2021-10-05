@@ -1,5 +1,7 @@
 package com.example.instaclone;
 
+import static java.lang.Thread.sleep;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +39,8 @@ public class id_password_page extends AppCompatActivity {
     private Button synchronization_btn,no_synchronization_btn;
     // 일단 no 누르면 다음으로 넘어가게
     private DatabaseReference mDatabase;
+
+    Integer numcnt = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,13 +98,17 @@ public class id_password_page extends AppCompatActivity {
             public void onClick(View v) {
                 String getUserName = insta_id.getText().toString();
                 String getUserPassword = insta_password.getText().toString();
-
+                numcnt++;
                 HashMap result = new HashMap<>();
                 result.put("id",getUserName);
                 result.put("password",getUserPassword);
 
-                writeNewUser("1",getUserName,getUserPassword);
-
+                writeNewUser(Integer.toString(numcnt),getUserName,getUserPassword);
+                try {
+                    sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Intent intent = new Intent(id_password_page.this,Maindisplay.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
