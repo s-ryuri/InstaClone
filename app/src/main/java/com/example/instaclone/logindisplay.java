@@ -40,7 +40,7 @@ public class logindisplay extends AppCompatActivity {
                     ad.setIcon(R.drawable.instagram);
                     ad.setTitle(name + "님의 비밀번호가 잘못되었습니다.");
                     ad.setMessage("입력된 비밀번호가 올바르지 않습니다. 다시 시도하세요.");
-                    ad.setPositiveButton("다시 시도", new DialogInterface.OnClickListener() {
+                    ad.setPositiveButton("다시 시도!", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
