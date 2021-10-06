@@ -36,12 +36,14 @@
         android:background="@drawable/edit_round"
         android:layout_marginBottom="10dp"
         android:id="@+id/instaid"
+        android:singleLine="true"
         android:padding="10dp"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/login_password"
         android:id="@+id/password"
+        android:singleLine="true"
         android:background="@drawable/edit_round"
         android:layout_marginBottom="10dp"
         android:padding="10dp"/>
