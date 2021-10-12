@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "444485155671",
+    "project_id": "clone-223bd",
+    "storage_bucket": "clone-223bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444485155671:android:1099392cc4bac0efde5c12",
+        "android_client_info": {
+          "package_name": "com.example.instaclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444485155671-oenkgthu30d0mee8542p3p6ur0hkpsao.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instaclone",
+            "certificate_hash": "988f628137654ef3af653fa2aa9686b608a15997"
+          }
+        },
+        {
+          "client_id": "444485155671-gr714btllb1vts677blfs4pb5k2bc3eh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4wM2mJSNT8_ASJAeEQhoJI5UXl0-GxoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444485155671-gr714btllb1vts677blfs4pb5k2bc3eh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -64,6 +64,7 @@ public class id_password_page extends AppCompatActivity {
         no_synchronization_btn = (Button) findViewById(R.id.no_synchronization_btn);
         insta_password = (EditText) findViewById(R.id.insta_password);
         insta_id = (EditText) findViewById(R.id.insta_id);
+
         insta_password.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -90,6 +91,7 @@ public class id_password_page extends AppCompatActivity {
                 }
             }
         });
+
         mDatabase = FirebaseDatabase.getInstance().getReference();
         readUser();
 
